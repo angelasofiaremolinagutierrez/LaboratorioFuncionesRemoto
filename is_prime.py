@@ -14,8 +14,12 @@ def is_prime():
     else:
         print(otro)
 
-try:
-    n = int(input("Ingresa un número: "))
-    is_prime()
-except ValueError:
-    print ("Carácter no válido. Intenta otra vez")
+while True:
+    try:
+        n = int(input("Ingresa un número: "))
+        if n <= 0 :
+            break
+        else:
+            is_prime()
+    except ValueError:
+        print ("Carácter no válido. Intenta otra vez")
