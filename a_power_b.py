@@ -5,14 +5,15 @@ def a_power_b():
         prod_acum = prod_acum * a
     print(prod_acum)
 
+while True:
+        try:
+            a=int(input("Ingrese el número base: "))
+            if a != 0:
+                b=int(input("Ingrese el número exponente: "))
+                a_power_b()
+            else:
+                print("Carácter no válido")
+                break
 
-a=int(input("Ingrese el número base: "))
-b=int(input("Ingrese el número exponente: "))
-a_power_b()
-
-while a!=0:
-    a=int(input("Ingrese el número base: "))
-    b=int(input("Ingrese el número exponente: "))
-    a_power_b()
-
-print("Carácter no válido")
+        except ValueError:
+            print ("Carácter no válido. Intenta otra vez")
