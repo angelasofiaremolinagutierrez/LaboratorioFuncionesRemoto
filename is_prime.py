@@ -14,6 +14,7 @@ def is_prime():
     else:
         print(otro)
 
+nveces = 0
 while True:
     try:
         n = int(input("Ingresa un número: "))
@@ -21,5 +22,17 @@ while True:
             break
         else:
             is_prime()
+            nveces = nveces + 1
     except ValueError:
         print ("Carácter no válido. Intenta otra vez")
+
+print("Se comprobó", nveces,"veces si un número era primo")
+
+nv_div = 0
+for y in range (1,nveces+1):
+    if (nveces%y) == 0:
+      nv_div = nv_div + 1
+if nv_div<=2 and nv_div>0:
+    print("Y está cantidad fue prima")
+else:
+    print("Y está cantidad no fue prima")
